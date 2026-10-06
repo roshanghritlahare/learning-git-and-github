@@ -24,6 +24,4 @@ jobs:
         run: |
           echo "Executing project test suites..."
           echo "All 5 core tests passed successfully!"
-	  echo "Oh no! A critical bug was found in the code!"
-      # यह कमांड आपके टेस्ट को जबरदस्ती फेल कर देगा |
-  #exit 1 
+
