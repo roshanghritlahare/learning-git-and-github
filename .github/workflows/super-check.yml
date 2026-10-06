@@ -11,7 +11,7 @@ jobs:
     steps:
       # 1. यह स्टेप गिटहब के सर्वर पर आपका कोड डाउनलोड करता है
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2 
 
       # 2. यह स्टेप एक नकली कोड स्कैन (Linting) चलाएगा
       - name: Run Code Linter Scan
@@ -24,3 +24,6 @@ jobs:
         run: |
           echo "Executing project test suites..."
           echo "All 5 core tests passed successfully!"
+	  echo "Oh no! A critical bug was found in the code!"
+      # यह कमांड आपके टेस्ट को जबरदस्ती फेल कर देगा
+          exit 1 
